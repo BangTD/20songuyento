@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="in">
+<button type="button" onclick="dem()">click</button>
+<p id="hien"></p>
+<script>
+    function kt(a) {
+        if (a < 2) {
+            return 0;
+        } else {
+            if (a > 2 && a%2 == 0) {
+                return 0;
+            }else {
+                for (i = 3; i < a; i = i+2 ) {
+                    if (a % i == 0) {
+                        return 0;
+                    }
+                }
+            }
+        }
+        return 1;
+    }
+
+    function dem() {
+        let sl = parseInt(document.getElementById("in").value);
+        let x = "2";
+        let b = 3;
+        for (j = 1; j < sl;){
+            if (kt(b)){
+                x += "-" + b;
+                j++;
+            }
+            b++;
+        }
+        document.getElementById("hien").innerHTML = x;
+    }
+</script>
+</body>
+</html>
