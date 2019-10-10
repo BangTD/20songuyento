@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="in">
+<input value="Tinh lai" onclick="lai()" type="button">
+<input value="gui tiep" onclick="gui()" type="button">
+<p id="pa"></p>
+<script>
+    function lai() {
+        var a = document.getElementById("in").value;
+        var b;
+        if (a<1000){
+            b = a*5/100;
+        }else {
+            if (a<20000){
+                b = a*10/100;
+            }else {
+                b = a*20/100;
+            }
+        }
+        document.getElementById("pa").innerHTML = b;
+        document.getElementById("in").value = "";
+    }
+    function gui() {
+        var a = document.getElementById("in").value;
+        var b = document.getElementById("pa").value;
+        document.getElementById("in").value = "";
+        document.getElementById("in").value = a;
+    }
+</script>
+</body>
+</html>

@@ -16,7 +16,7 @@
             if (a > 2 && a%2 == 0) {
                 return 0;
             }else {
-                for (i = 3; i < a; i = i+2 ) {
+                for (i = 3; i <= a/2 ; i = i+2 ) {
                     if (a % i == 0) {
                         return 0;
                     }
@@ -30,7 +30,15 @@
         let sl = parseInt(document.getElementById("in").value);
         let x = "2";
         let b = 3;
-        for (j = 1; j < sl;){
+        /*for (j = 1; j < sl;){
+            if (kt(b)){
+                x += "-" + b;
+                j++;
+            }
+            b++;
+        }*/
+        let j = 1;
+        while (j < sl){
             if (kt(b)){
                 x += "-" + b;
                 j++;
